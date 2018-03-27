@@ -139,7 +139,7 @@ class RaquetesUsadas {
 		include '../../../google/CustomAnalytcs_class.php';
 		$service_account_email = ANALYTICS;
 		// $key_file_location = 'GoogleAnalytics-fa32e1a557ad.p12';
-		$key_file_location = '../data/key.p12';
+		$key_file_location = '../data/raquetesusadas.p12';
 		$analytics = new CustomAnalytcs_class($service_account_email, $key_file_location);
 		// $sessiondata = $analytics->getSessonData();
 		$realtimedata = $analytics->getRealtimeData();
@@ -157,10 +157,10 @@ class RaquetesUsadas {
 	public function onlinesmes(){
 		require '../../../google/gapi.class.php';
 
-	    $ga = new gapi(ANALYTICS, "../data/key.p12");
+	    $ga = new gapi(ANALYTICS, "../data/raquetesusadas.p12");
 	    
 	    //ID do perfil do site
-	    $id = '171744989';
+	    $id = '135458574';
 	    
 	    //Busca os pageviews e visitas do mês atual
 	    $inicio = date('Y-m-01'); //Atribui o 1º dia do mês atual
@@ -215,9 +215,9 @@ class RaquetesUsadas {
 	public function taxaconversao(){
 		/**************** Onlines Mes ****************/ 
 		require '../../../google/gapi.class.php';
-	    $ga = new gapi(ANALYTICS, "../data/key.p12");
+	    $ga = new gapi(ANALYTICS, "../data/raquetesusadas.p12");
 	    //ID do perfil do site
-	    $id = '171744989';  
+	    $id = '135458574';  
 	    $inicio = date('Y-m-01'); //Atribui o 1º dia do mês atual
 	    $fim = date('Y-m-t'); //Atribui o último dia do mês atual
 	    $ga->requestReportData($id, 'month', array('pageviews', 'visits'), null, null, $inicio, $fim, null, null);

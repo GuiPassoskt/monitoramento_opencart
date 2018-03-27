@@ -152,6 +152,7 @@ ul.nostyle i {
 *******Header******
 **************************/
 .navbar.navbar-default {
+  background-color:#222534!important;
   border: 0;
   border-radius: 0;
   margin-bottom: 0;
@@ -165,7 +166,7 @@ ul.nostyle i {
 }
 @media only screen and (min-width: 768px) {
   #main-menu.navbar-default {
-    background: rgba(255, 255, 255, 0.9);
+    background:#222534!important;
     -webkit-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.1);
     box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.1);
   }

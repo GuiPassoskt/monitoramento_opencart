@@ -241,7 +241,7 @@ class Teste {
 		$result = null;
 		if($response1['total'] > 0){
 			$result['total'] = $data['total']/$response1['total'];
-			$result['total'] = number_format($result['total'],4);
+			$result['total'] = number_format($result['total'],4,',','.');
 			echo json_encode($result);
 		}else{
 			$result['total'] = '0';

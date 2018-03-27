@@ -1,4 +1,7 @@
-function getOrderReport(url,id)
+var protocol = 'http';
+var host = 'localhost';
+
+	function getOrderReport(url,id)
 	{
 
 		$.get(url,function(response)
@@ -13,105 +16,105 @@ function getOrderReport(url,id)
 	setInterval(function call(){
 
 	/* Raquetes Usadas */	
-	getOrderReport("https://www.raquetesusadas.com.br/ru_reports/?class=Controller_System_Main&method=order_report&period=day&lost=false","ru_orderConvertedDay");
-    getOrderReport("https://www.raquetesusadas.com.br/ru_reports/?class=Controller_System_Main&method=order_report&period=month&lost=false","ru_orderConvertedMonth");
-    getOrderReport("https://www.raquetesusadas.com.br/ru_reports/?class=Controller_System_Main&method=order_report&period=day&lost=true","ru_orderLostDay");
-    getOrderReport("https://www.raquetesusadas.com.br/ru_reports/?class=Controller_System_Main&method=getRefusedOrderMonth","ru_orderLostMonth");
+	getOrderReport(protocol+'://'+host+'/aloisewatch/store/raquetesusadas/crn/pedidoshoje.php','ru_orderConvertedDay');
+    getOrderReport(protocol+'://'+host+'/aloisewatch/store/raquetesusadas/crn/pedidosperdidoshoje.php','ru_orderConvertedMonth');
+    getOrderReport(protocol+'://'+host+'/aloisewatch/store/raquetesusadas/crn/pedidosmes.php','ru_orderLostDay');
+    getOrderReport(protocol+'://'+host+'/aloisewatch/store/raquetesusadas/crn/pedidosperdidosmes.php','ru_orderLostMonth');
 	/* Vendas */
-	getOrderReport("https://www.raquetesusadas.com.br/ru_reports/?class=Controller_System_Main&method=sold_report&period=day","ru_soldDay");
-	getOrderReport("https://www.raquetesusadas.com.br/ru_reports/?class=Controller_System_Main&method=sold_report&period=month","ru_soldMonth");
+	getOrderReport(protocol+'://'+host+'/aloisewatch/store/raquetesusadas/crn/vendashoje.php','ru_soldDay');
+	getOrderReport(protocol+'://'+host+'/aloisewatch/store/raquetesusadas/crn/vendasmes.php','ru_soldMonth');
 	/* Ticket */
-	getOrderReport("https://www.raquetesusadas.com.br/ru_reports/?class=Controller_System_Main&method=ticketM&period=month","ru_avg");
+	getOrderReport(protocol+'://'+host+'/aloisewatch/store/raquetesusadas/crn/ticketmedio.php','ru_avg');
 	/* Onlines */
 
-	getOrderReport("https://www.raquetesusadas.com.br/ru_reports/?class=Controller_System_Main&method=online_report&period=month","ru_onlineMonth");
+	getOrderReport(protocol+'://'+host+'/aloisewatch/store/raquetesusadas/crn/onlines.php','ru_onlineMonth');
 	/* Taxa de Conversão */
-	getOrderReport("https://www.raquetesusadas.com.br/ru_reports/?class=Controller_System_Main&method=taxConversion&period=month","ru_taxConv");
+	getOrderReport(protocol+'://'+host+'/aloisewatch/store/raquetesusadas/crn/taxaconversao.php','ru_taxConv');
 	/* Onlines por mês */
-	getOrderReport("https://www.raquetesusadas.com.br/ru_reports/?class=Controller_System_Main&method=online_mes_report&period=day","ru_userMonth");
+	getOrderReport(protocol+'://'+host+'/aloisewatch/store/raquetesusadas/crn/visitasmes.php','ru_userMonth');
 
 	/* Oficina do tenistas */	
-	getOrderReport("https://www.oficinadotenista.com.br/reports/?class=Controller_System_Main&method=order_report&period=day&lost=false","ot_orderConvertedDay");
-    getOrderReport("https://www.oficinadotenista.com.br/reports/?class=Controller_System_Main&method=order_report&period=month&lost=false","ot_orderConvertedMonth");
-    getOrderReport("https://www.oficinadotenista.com.br/reports/?class=Controller_System_Main&method=order_report&period=day&lost=true","ot_orderLostDay");
-    getOrderReport("https://www.oficinadotenista.com.br/reports/?class=Controller_System_Main&method=getRefusedOrderMonth","ot_orderLostMonth");
+	getOrderReport(protocol+'://'+host+'/aloisewatch/store/oficinadotenista/crn/pedidoshoje.php','ot_orderConvertedDay');
+    getOrderReport(protocol+'://'+host+'/aloisewatch/store/oficinadotenista/crn/pedidosperdidoshoje.php','ot_orderConvertedMonth');
+    getOrderReport(protocol+'://'+host+'/aloisewatch/store/oficinadotenista/crn/pedidosmes.php','ot_orderLostDay');
+    getOrderReport(protocol+'://'+host+'/aloisewatch/store/oficinadotenista/crn/pedidosperdidosmes.php','ot_orderLostMonth');
 	/* Vendas */
-	getOrderReport("https://www.oficinadotenista.com.br/reports/?class=Controller_System_Main&method=sold_report&period=day","ot_soldDay");
-	getOrderReport("https://www.oficinadotenista.com.br/reports/?class=Controller_System_Main&method=sold_report&period=month","ot_soldMonth");
+	getOrderReport(protocol+'://'+host+'/aloisewatch/store/oficinadotenista/crn/vendashoje.php','ot_soldDay');
+	getOrderReport(protocol+'://'+host+'/aloisewatch/store/oficinadotenista/crn/vendasmes.php','ot_soldMonth');
 	/* Ticket */
-	getOrderReport("https://www.oficinadotenista.com.br/reports/?class=Controller_System_Main&method=ticketM&period=month","ot_avg");
+	getOrderReport(protocol+'://'+host+'/aloisewatch/store/oficinadotenista/crn/ticketmedio.php','ot_avg');
 	/* Onlines */
 
-	getOrderReport("https://www.oficinadotenista.com.br/reports/?class=Controller_System_Main&method=online_report&period=month","ot_onlineMonth");
+	getOrderReport(protocol+'://'+host+'/aloisewatch/store/oficinadotenista/crn/onlines.php','ot_onlineMonth');
 	/* Taxa de Conversão */
-	getOrderReport("https://www.oficinadotenista.com.br/reports/?class=Controller_System_Main&method=taxConversion&period=month","ot_taxConv");
+	getOrderReport(protocol+'://'+host+'/aloisewatch/store/oficinadotenista/crn/taxaconversao.php','ot_taxConv');
 	/* Onlines por mês */
-	getOrderReport("https://www.oficinadotenista.com.br/reports/?class=Controller_System_Main&method=online_mes_report&period=day","ot_userMonth");
+	getOrderReport(protocol+'://'+host+'/aloisewatch/store/oficinadotenista/crn/visitasmes.php','ot_userMonth');
 	
 	/* HeadStore */
-	getOrderReport("https://headstore.com.br/reports/?class=Controller_System_Main&method=order_report&period=day&lost=false","hs_orderConvertedDay");
-    getOrderReport("https://headstore.com.br/reports/?class=Controller_System_Main&method=order_report&period=month&lost=false","hs_orderConvertedMonth");
-    getOrderReport("https://headstore.com.br/reports/?class=Controller_System_Main&method=order_report&period=day&lost=true","hs_orderLostDay");
-    getOrderReport("https://headstore.com.br/reports/?class=Controller_System_Main&method=getRefusedOrderMonth","hs_orderLostMonth");
+	getOrderReport(protocol+'://'+host+'/aloisewatch/store/headstore/crn/pedidoshoje.php','hs_orderConvertedDay');
+    getOrderReport(protocol+'://'+host+'/aloisewatch/store/headstore/crn/pedidosperdidoshoje.php','hs_orderConvertedMonth');
+    getOrderReport(protocol+'://'+host+'/aloisewatch/store/headstore/crn/pedidosmes.php','hs_orderLostDay');
+    getOrderReport(protocol+'://'+host+'/aloisewatch/store/headstore/crn/pedidosperdidosmes.php','hs_orderLostMonth');
 	/* Vendas */
-	getOrderReport("https://headstore.com.br/reports/?class=Controller_System_Main&method=sold_report&period=day","hs_soldDay");
-	getOrderReport("https://headstore.com.br/reports/?class=Controller_System_Main&method=sold_report&period=month","hs_soldMonth");
+	getOrderReport(protocol+'://'+host+'/aloisewatch/store/headstore/crn/vendashoje.php','hs_soldDay');
+	getOrderReport(protocol+'://'+host+'/aloisewatch/store/headstore/crn/vendasmes.php','hs_soldMonth');
 	/* Ticket */
-	getOrderReport("https://headstore.com.br/reports/?class=Controller_System_Main&method=ticketM&period=month","hs_avg");
+	getOrderReport(protocol+'://'+host+'/aloisewatch/store/headstore/crn/ticketmedio.php','hs_avg');
 	/* Onlines */
 
-	getOrderReport("https://headstore.com.br/reports/?class=Controller_System_Main&method=online_report&period=month","hs_onlineMonth");
+	getOrderReport(protocol+'://'+host+'/aloisewatch/store/headstore/crn/onlines.php','hs_onlineMonth');
 	/* Taxa de Conversão */
-	getOrderReport("https://headstore.com.br/reports/?class=Controller_System_Main&method=taxConversion&period=month","hs_taxConv");
+	getOrderReport(protocol+'://'+host+'/aloisewatch/store/headstore/crn/taxaconversao.php','hs_taxConv');
 	/* Onlines por mês */
-	getOrderReport("https://headstore.com.br/reports/?class=Controller_System_Main&method=online_mes_report&period=day","hs_userMonth");
+	getOrderReport(protocol+'://'+host+'/aloisewatch/store/headstore/crn/visitasmes.php','hs_userMonth');
 
 	/* HeadBrasil */
-	getOrderReport("https://www.headbrasil.com.br/reports/?class=Controller_System_Main&method=order_report&period=day&lost=false","hb_orderConvertedDay");
-    getOrderReport("https://www.headbrasil.com.br/reports/?class=Controller_System_Main&method=order_report&period=month&lost=false","hb_orderConvertedMonth");
-    getOrderReport("https://www.headbrasil.com.br/reports/?class=Controller_System_Main&method=order_report&period=day&lost=true","hb_orderLostDay");
-    getOrderReport("https://www.headbrasil.com.br/reports/?class=Controller_System_Main&method=getRefusedOrderMonth","hb_orderLostMonth");
+	getOrderReport(protocol+'://'+host+'/aloisewatch/store/headbrasil/crn/pedidoshoje.php','hb_orderConvertedDay');
+    getOrderReport(protocol+'://'+host+'/aloisewatch/store/headbrasil/crn/pedidosperdidoshoje.php','hb_orderConvertedMonth');
+    getOrderReport(protocol+'://'+host+'/aloisewatch/store/headbrasil/crn/pedidosmes.php','hb_orderLostDay');
+    getOrderReport(protocol+'://'+host+'/aloisewatch/store/headbrasil/crn/pedidosperdidosmes.php','hb_orderLostMonth');
 	/* Vendas */
-	getOrderReport("https://www.headbrasil.com.br/reports/?class=Controller_System_Main&method=sold_report&period=day","hb_soldDay");
-	getOrderReport("https://www.headbrasil.com.br/reports/?class=Controller_System_Main&method=sold_report&period=month","hb_soldMonth");
+	getOrderReport(protocol+'://'+host+'/aloisewatch/store/headbrasil/crn/vendashoje.php','hb_soldDay');
+	getOrderReport(protocol+'://'+host+'/aloisewatch/store/headbrasil/crn/vendasmes.php','hb_soldMonth');
 	/* Ticket */
-	getOrderReport("https://www.headbrasil.com.br/reports/?class=Controller_System_Main&method=ticketM&period=month","hb_avg");
+	getOrderReport(protocol+'://'+host+'/aloisewatch/store/headbrasil/crn/ticketmedio.php','hb_avg');
 	/* Onlines */
 
-	getOrderReport("https://www.headbrasil.com.br/reports/?class=Controller_System_Main&method=online_report&period=month","hb_onlineMonth");
+	getOrderReport(protocol+'://'+host+'/aloisewatch/store/headbrasil/crn/onlines.php','hb_onlineMonth');
 	/* Taxa de Conversão */
-	getOrderReport("https://www.headbrasil.com.br/reports/?class=Controller_System_Main&method=taxConversion&period=month","hb_taxConv");
+	getOrderReport(protocol+'://'+host+'/aloisewatch/store/headbrasil/crn/taxaconversao.php','hb_taxConv');
 	/* Onlines por mês */
-	getOrderReport("https://www.headbrasil.com.br/reports/?class=Controller_System_Main&method=online_mes_report&period=day","hb_userMonth");
+	getOrderReport(protocol+'://'+host+'/aloisewatch/store/headbrasil/crn/visitasmes.php','hb_userMonth');
 
 	/* DLD Lojista */
-	getOrderReport("https://lojista.dld.com.br/reports/?class=Controller_System_Main&method=order_report&period=day&lost=false","dld_orderConvertedDay");
-    getOrderReport("https://lojista.dld.com.br/reports/?class=Controller_System_Main&method=order_report&period=month&lost=false","dld_orderConvertedMonth");
-    getOrderReport("https://lojista.dld.com.br/reports/?class=Controller_System_Main&method=order_report&period=day&lost=true","dld_orderLostDay");
-    getOrderReport("https://lojista.dld.com.br/reports/?class=Controller_System_Main&method=getRefusedOrderMonth","dld_orderLostMonth");
+	getOrderReport(protocol+'://'+host+'/aloisewatch/store/dldlojista/crn/pedidoshoje.php','dld_orderConvertedDay');
+    getOrderReport(protocol+'://'+host+'/aloisewatch/store/dldlojista/crn/pedidosperdidoshoje.php','dld_orderConvertedMonth');
+    getOrderReport(protocol+'://'+host+'/aloisewatch/store/dldlojista/crn/pedidosmes.php','dld_orderLostDay');
+    getOrderReport(protocol+'://'+host+'/aloisewatch/store/dldlojista/crn/pedidosperdidosmes.php','dld_orderLostMonth');
 	/* Vendas */
-	getOrderReport("https://lojista.dld.com.br/reports/?class=Controller_System_Main&method=sold_report&period=day","dld_soldDay");
-	getOrderReport("https://lojista.dld.com.br/reports/?class=Controller_System_Main&method=sold_report&period=month","dld_soldMonth");
+	getOrderReport(protocol+'://'+host+'/aloisewatch/store/dldlojista/crn/vendashoje.php','dld_soldDay');
+	getOrderReport(protocol+'://'+host+'/aloisewatch/store/dldlojista/crn/vendasmes.php','dld_soldMonth');
 	/* Ticket */
-	getOrderReport("https://lojista.dld.com.br/reports/?class=Controller_System_Main&method=ticketM&period=month","dld_avg");
+	getOrderReport(protocol+'://'+host+'/aloisewatch/store/dldlojista/crn/ticketmedio.php','dld_avg');
 	/* Onlines */
 
-	getOrderReport("https://lojista.dld.com.br/reports/?class=Controller_System_Main&method=online_report&period=month","dld_onlineMonth");
+	getOrderReport(protocol+'://'+host+'/aloisewatch/store/dldlojista/crn/onlines.php','dld_onlineMonth');
 	/* Taxa de Conversão */
-	getOrderReport("https://lojista.dld.com.br/reports/?class=Controller_System_Main&method=taxConversion&period=month","dld_taxConv");
+	getOrderReport(protocol+'://'+host+'/aloisewatch/store/dldlojista/crn/taxaconversao.php','dld_taxConv');
 	/* Onlines por mês */
-	getOrderReport("https://lojista.dld.com.br/reports/?class=Controller_System_Main&method=online_mes_report&period=day","dld_userMonth");
+	getOrderReport(protocol+'://'+host+'/aloisewatch/store/dldlojista/crn/visitasmes.php','dld_userMonth');
 
 
 	},50000);
 
 	setInterval(function call(){
-	getOrderReport("https://www.raquetesusadas.com.br/ru_reports/?class=Controller_System_Main&method=online_report&period=day","ru_onlineDay");
-	getOrderReport("https://www.oficinadotenista.com.br/reports/?class=Controller_System_Main&method=online_report&period=day","ot_onlineDay");
-	getOrderReport("https://headstore.com.br/reports/?class=Controller_System_Main&method=online_report&period=day","hs_onlineDay");
-	getOrderReport("https://www.headbrasil.com.br/reports/?class=Controller_System_Main&method=online_report&period=day","hb_onlineDay");
-	getOrderReport("https://lojista.dld.com.br/reports/?class=Controller_System_Main&method=online_report&period=day","dld_onlineDay");
-	},5000);
+	getOrderReport(protocol+'://'+host+'/aloisewatch/store/raquetesusadas/crn/onlines.php','ru_onlineDay');
+	getOrderReport(protocol+'://'+host+'/aloisewatch/store/oficinadotenista/crn/onlines.php','ot_onlineDay');
+	getOrderReport(protocol+'://'+host+'/aloisewatch/store/headstore/crn/onlines.php','hs_onlineDay');
+	getOrderReport(protocol+'://'+host+'/aloisewatch/store/headbrasil/crn/onlines.php','hb_onlineDay');
+	getOrderReport(protocol+'://'+host+'/aloisewatch/store/dldlojista/crn/onlines.php','dld_onlineDay');
+	},10000);//intervalo de 10 segundos
 
 	
 	function getOnlineMonth(url)
@@ -123,18 +126,14 @@ function getOrderReport(url,id)
 	}
 
 	setInterval(function call(){
-	getOnlineMonth("https://www.raquetesusadas.com.br/ru_reports/?class=Controller_System_Main&method=online_month");
-	getOnlineMonth("https://www.raquetesusadas.com.br/ru_reports/?class=Controller_System_Main&method=delete_online_month");
+	getOnlineMonth(protocol+'://'+host+'/aloisewatch/store/raquetesusadas/crn/visitasmes.php');
 
-	getOnlineMonth("https://www.oficinadotenista.com.br/reports/?class=Controller_System_Main&method=online_month");
-	getOnlineMonth("https://www.oficinadotenista.com.br/reports/?class=Controller_System_Main&method=delete_online_month");
+	getOnlineMonth(protocol+'://'+host+'/aloisewatch/store/oficinadotenista/crn/visitasmes.php');
 
-	getOnlineMonth("https://www.headstore.com.br/reports/?class=Controller_System_Main&method=online_month");
-	getOnlineMonth("https://www.headstore.com.br/reports/?class=Controller_System_Main&method=delete_online_month");
+	getOnlineMonth(protocol+'://'+host+'/aloisewatch/store/headstore/crn/visitasmes.php');
 
-	getOnlineMonth("https://www.headbrasil.com.br/reports/?class=Controller_System_Main&method=online_month");
-	getOnlineMonth("https://www.headbrasil.com.br/reports/?class=Controller_System_Main&method=delete_online_month");
+	getOnlineMonth(protocol+'://'+host+'/aloisewatch/store/headbrasil/crn/visitasmes.php');
 
-	getOnlineMonth("https://lojista.dld.com.br/reports/?class=Controller_System_Main&method=online_month");
-	getOnlineMonth("https://lojista.dld.com.br/reports/?class=Controller_System_Main&method=delete_online_month");
+	getOnlineMonth(protocol+'://'+host+'/aloisewatch/store/dldlojista/crn/visitasmes.php');
+
 	},3600000);

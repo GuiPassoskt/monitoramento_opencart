@@ -2,7 +2,7 @@
 
 	$data = array();
 	define('DB_PREFIX','ot_');
-	define('ANALYTICS','monitoramento@analyticsservice-198217.iam.gserviceaccount.com');
+	define('ANALYTICS','oficinadotenista@opencartot.iam.gserviceaccount.com');
 
 	// Oficina do Tenista
     $db = new mysqli('dedb12.porta80.com.br', 'dld', 'dld2014@@', 'oficinadotenista');

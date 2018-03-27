@@ -9,18 +9,18 @@
 	<title>Aloise - Monitoramento</title>
 	<link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
 	<link rel="stylesheet" ng-href="main.css">
-	<link rel="stylesheet" href="../js/angular-notify.css">
-	<script src="../js/jquery-3.1.1.min.js"></script>
-	<script src="../js/angular.min.js"></script>
+	<link rel="stylesheet" href="../js/angular/angular-notify.css">
+	<script src="../js/lib/jquery-3.1.1.min.js"></script>
+	<script src="../js/angular/angular.min.js"></script>
 	<script src="../js/app.js"></script>
 	<script src="../js/service.js"></script>
-	<script src="../js/ngMask.min.js"></script>
-	<script src="../js/angular-notify.js"></script>
-	<script src="../js/responsivevoice.js"></script>
-	<script src="../js/text-to-speech.js"></script>
+	<script src="../js/lib/ngMask.min.js"></script>
+	<script src="../js/angular/angular-notify.js"></script>
+	<script src="../js/lib/responsivevoice.js"></script>
+	<script src="../js/lib/text-to-speech.js"></script>
 	<script src="../js/validateform.js"></script>
 	<script src="../bootstrap/js/bootstrap.min.js"></script>
-	<script src="../js/bootbox.min.js"></script>
+	<script src="../js/lib/bootbox.min.js"></script>
 	<style>
 		.company{
 			background-color: rgba(15,103,136,0.6);
@@ -40,30 +40,15 @@
 	
 </head>
 <body>
-	<header id="header">
-        <nav id="main-menu" class="navbar navbar-default navbar-fixed-top" role="banner">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="index.html">
-                    	<img alt="Brand" ng-src="http://www.aloise.com.br/images/logo.png" class="img-responsive">
-                    </a>
-                </div>
-				
-                <div class="collapse navbar-collapse navbar-right">
-                	<ul class="nav navbar-nav">
-                        <li class="scroll active"><a ng-href="../">Home</a></li>
-                        <li class="scroll"><a href="../views/configure.php">Configurações</a></li>
-                    </ul>
-                </div>
-            </div><!--/.container-->
-        </nav><!--/nav-->
-    </header><br><!--/header-->
+<header id="header">
+    <nav id="main-menu" class="navbar navbar-default navbar-fixed-top" role="banner">
+        <div class="container"> 
+                <a class="navbar-brand" href="index.html" style="padding-bottom: 15px;padding-top: 15px;">
+                	<img alt="Brand" width="180" ng-src="../img/logo3.png" class="img-responsive">
+                </a>
+        </div>
+    </nav>
+</header>
 	<div class="container">
 		<div class="row" ng-controller="dataCtrl">
 			<div class="col-md-6">

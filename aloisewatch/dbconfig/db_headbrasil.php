@@ -2,7 +2,7 @@
 
 	$data = array();
 	define('DB_PREFIX','hb_');
-	define('ANALYTICS','monitoramento@analyticsservice-198217.iam.gserviceaccount.com');
+	define('ANALYTICS','headbrasil@opencartot.iam.gserviceaccount.com');
 
 	// Head Brasil
     $db = new mysqli('dedb12.porta80.com.br', 'dld', 'dld2014@@', 'headbrasil');

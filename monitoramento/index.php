@@ -9,17 +9,24 @@
 	<meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'">
 	<!-- <meta http-equiv="refresh" content="400;url=index.php"> -->
 	<title>Aloise - Monitoramento</title>
-	<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" ng-href="bootstrap/css/bootstrap.css">
 	<link rel="stylesheet" ng-href="views/main.css">
-	<link rel="stylesheet" href="js/angular-notify.css">
-	<script src="js/jquery-3.1.1.min.js"></script>
-	<script src="js/angular.min.js"></script>
+	<link rel="stylesheet" ng-href="js/angular/angular-notify.css">
+	<script src="js/lib/jquery-3.1.1.min.js"></script>
+	<script src="js/angular/angular.min.js"></script>
 	<script src="js/app.js"></script>
+	<!-- Controllers -->
+	<script src="js/controller/raquetesusadasCtrl.js"></script>
+	<script src="js/controller/oficinadotenistaCtrl.js"></script>
+	<script src="js/controller/headstoreCtrl.js"></script>
+	<script src="js/controller/headbrasilCtrl.js"></script>
+	<script src="js/controller/dldlojistaCtrl.js"></script>
+	<!-- Fim Controllers -->
 	<script src="js/service.js"></script>
-	<script src="js/ngMask.min.js"></script>
-	<script src="js/angular-notify.js"></script>
-	<script src="js/responsivevoice.js"></script>
-	<script src="js/text-to-speech.js"></script>
+	<script src="js/lib/ngMask.min.js"></script>
+	<script src="js/angular/angular-notify.js"></script>
+	<script src="js/lib/responsivevoice.js"></script>
+	<script src="js/lib/text-to-speech.js"></script>
 	<!-- <script src="js/requisition.js"></script> -->
 	<!-- <script src="js/monthrequisition.js"></script> -->
 </head>
@@ -29,7 +36,7 @@
     <nav id="main-menu" class="navbar navbar-default navbar-fixed-top" role="banner">
         <div class="container"> 
                 <a class="navbar-brand" href="index.html" style="padding-bottom: 15px;padding-top: 15px;">
-                	<img alt="Brand" width="180" ng-src="img/logo.png" class="img-responsive">
+                	<img alt="Brand" width="180" ng-src="img/logo3.png" class="img-responsive">
                 </a>
         </div>
     </nav>
@@ -37,7 +44,7 @@
 
 <div class="container-fluid">
 	<div class="row">
-		<table class="table table-bordered" ng-controller="dataCtrl">
+		<table class="table table-bordered">
 			<th style="width: 160px;text-align: center; border-right: 6px #000"><span class="glyphicon glyphicon-globe"></span> Sites</th>
 			<th style="width: 160px;text-align: center;">Pedidos
 				<table class="table table-bordered" width="100%">
@@ -69,7 +76,7 @@
 			</th>
 
 			<!-- Raquetes usadas -->
-			<tr class="active">
+			<tr class="active" ng-controller="raquetesusadasCtrl">
 				<td style=" vertical-align: middle;" align="center"><img class="img-responsive" width="180" ng-src="img/logo_ru_site_04.png" width="270" height="113"></td>
 				<td>
 					<!-- Order -->
@@ -128,7 +135,7 @@
 			<!-- Fim Raquetes Usadas -->
 
 			<!-- Oficina do tenista -->
-			<tr class="active">
+			<tr class="active" ng-controller="oficinadotenistaCtrl">
 				<td style=" vertical-align: middle;" align="center"><img class="img-responsive" width="180" ng-src="img/Logo_OT_web_30.png" width="270" height="113"></td>
 				<td>
 					<!-- Order -->
@@ -187,7 +194,7 @@
 			<!-- Fim Oficina do Tenista -->
 
 			<!-- Head Store -->
-			<tr class="active">
+			<tr class="active" ng-controller="headstoreCtrl">
 				<td style=" vertical-align: middle;" align="center"><img class="img-responsive" width="180" ng-src="img/Logo_.png" width="270" height="113"></td>
 				<td>
 					<!-- Order -->
@@ -246,7 +253,7 @@
 			<!-- Fim Head Store -->
 
 			<!-- HeadBrasil -->
-			<tr class="active">
+			<tr class="active" ng-controller="headbrasilCtrl">
 				<td style=" vertical-align: middle;" align="center"><img class="img-responsive" width="180" ng-src="img/logo_head.fw.png" width="270" height="113"></td>
 				<td>
 					<!-- Order -->
@@ -280,7 +287,7 @@
 					<!-- Access -->
 					<table class="table table-bordered" width="100%">
 						<tr style="height:35px;">
-							<td align="center" width="50%"><span id='hb_onlineDay'>0</span></td>
+							<td align="center" width="50%"><span id='hb_onlineDay'>{{hbaccessdayFormat}}</span></td>
 							<td align="center" width="50%">{{hbaccessFormat}}</td>
 						</tr>
 					</table>
@@ -305,22 +312,22 @@
 			<!-- Fim Head Brasil -->
 
 			<!-- DLD Lojista -->
-			<tr class="active">
-				<td style=" vertical-align: middle;" align="center"><img class="img-responsive" width="180" ng-src="img/logo_dld_lojista_conf.jpg" width="270" height="113"></td>
+			<tr class="active" ng-controller="dldlojistaCtrl">
+				<td style=" vertical-align: middle;" align="center"><img class="img-responsive" width="180" ng-src="img/logo_dld_lojista_conf.png" width="270" height="113"></td>
 				<td>
 					<!-- Order -->
 					<table class="table table-bordered" width="100%">
 						<tr>
 							<td width="50%">
 								<table class="table table-bordered" width="100%">
-									<td align="center" width="50%"><span  id="dld_orderConvertedDay">0</span> <span class="glyphicon glyphicon-thumbs-up" style="color:green;"></span></td>
-									<td align="center" width="50%"><span  id="dld_orderLostDay">0</span> <span class="glyphicon glyphicon-thumbs-down" style="color:red;"></span></td>
+									<td align="center" width="50%"><span  id="dld_orderConvertedDay">{{dldorderdayFormat}}</span> <span class="glyphicon glyphicon-thumbs-up" style="color:green;"></span></td>
+									<td align="center" width="50%"><span  id="dld_orderLostDay">{{dldlostorderdayFormat}}</span> <span class="glyphicon glyphicon-thumbs-down" style="color:red;"></span></td>
 								</table>
 							</td>
 							<td width="50%">
 								<table class="table table-bordered" width="100%">
 									<td align="center" width="50%">{{dldorderFormat}} <span class="glyphicon glyphicon-thumbs-up" style="color:green;"></span></td>
-									<td align="center" width="50%"><span  id="dld_orderLostMonth">0</span> <span class="glyphicon glyphicon-thumbs-down" style="color:red;"></span></td>
+									<td align="center" width="50%"><span  id="dld_orderLostMonth">{{dldlostordermonthFormat}}</span> <span class="glyphicon glyphicon-thumbs-down" style="color:red;"></span></td>
 								</table>
 							</td>
 						</tr>
@@ -339,7 +346,7 @@
 					<!-- Access -->
 					<table class="table table-bordered" width="100%">
 						<tr style="height:35px;">
-							<td align="center" width="50%"><span id='dld_onlineDay'>0</span></td>
+							<td align="center" width="50%"><span id='dld_onlineDay'>{{dldaccessdayFormat}}</span></td>
 							<td align="center" width="50%">{{dldaccessFormat}}</td>
 						</tr>
 					</table>
